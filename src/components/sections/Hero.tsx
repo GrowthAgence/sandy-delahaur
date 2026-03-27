@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const fadeUp = {
@@ -18,9 +19,14 @@ const fadeUp = {
 export default function Hero() {
   return (
     <header className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
-      {/* Background image placeholder — replace with Sandy's portrait */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-surface-container-lowest via-surface to-surface-container" />
+        <Image
+          src="/images/sandy-hero.png"
+          alt="Sandy Delahaur — TEDx speaker"
+          fill
+          priority
+          className="object-cover object-right opacity-40"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
       </div>
 
