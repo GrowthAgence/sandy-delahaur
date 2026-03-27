@@ -25,7 +25,7 @@ export default function Hero() {
           alt="Sandy Delahaur — TEDx speaker"
           fill
           priority
-          className="object-cover object-right opacity-40"
+          className="object-cover object-right opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
       </div>
