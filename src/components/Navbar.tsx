@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Shine", href: "/shine" },
   { label: "Événements", href: "/evenements" },
   { label: "Entreprises", href: "/entreprises" },
+  { label: "Sandy", href: "/a-propos" },
 ];
 
 export default function Navbar() {
