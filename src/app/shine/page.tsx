@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "SHINE — SDL Agency | Le sommet du leadership f&eacute;minin",
@@ -306,10 +307,13 @@ export default function ShinePage() {
 
         {/* ── Final Call to Action ── */}
         <section className="py-32 md:py-40 px-6 md:px-12 text-center relative bg-surface">
-          <RevealOnScroll className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline italic text-white leading-tight">
-              Votre prochain chapitre <br /> ne sera pas &eacute;crit. <br />
-              <span className="text-primary">Il sera dict&eacute;.</span>
+              <WordReveal>{"Votre prochain chapitre ne sera pas écrit."}</WordReveal>
+              <br />
+              <span className="text-primary">
+                <WordReveal delay={0.6} wordClassName="text-primary">{"Il sera dicté."}</WordReveal>
+              </span>
             </h2>
             <p className="text-lg md:text-xl text-on-surface-variant/60 font-light max-w-2xl mx-auto">
               Pr&ecirc;te &agrave; passer de l&apos;ombre de
@@ -317,17 +321,17 @@ export default function ShinePage() {
               l&apos;influence&nbsp;? R&eacute;servez votre diagnostic de
               posture aujourd&apos;hui.
             </p>
-            <div className="pt-8">
-              <Link
-                href="/#contact"
-                className="bg-transparent border-2 border-primary text-primary px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl font-bold font-body hover:bg-primary hover:text-on-primary transition-all duration-500 inline-block"
-              >
-                Commencer l&apos;ascension
-              </Link>
-            </div>
-          </RevealOnScroll>
-          {/* Decorative bottom line */}
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            <RevealOnScroll delay={1.0}>
+              <div className="pt-8">
+                <Link
+                  href="/#contact"
+                  className="bg-transparent border-2 border-primary text-primary px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl font-bold font-body hover:bg-primary hover:text-on-primary transition-all duration-500 inline-block"
+                >
+                  <WordReveal delay={1.2} stagger={0.12}>{"Commencer l\u2019ascension"}</WordReveal>
+                </Link>
+              </div>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

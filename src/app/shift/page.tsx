@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "SHIFT — Construis le syst\u00e8me qui vend pour toi | SDL Agency",
@@ -209,22 +210,19 @@ export default function ShiftPage() {
 
         {/* Statement Section */}
         <section className="py-32 bg-surface-container-lowest flex items-center justify-center text-center px-6">
-          <RevealOnScroll>
-            <div className="max-w-4xl space-y-12">
-              <h2 className="font-headline text-4xl md:text-6xl leading-tight">
-                &ldquo;La v&eacute;ritable &eacute;l&eacute;gance
-                r&eacute;side dans un syst&egrave;me qui{" "}
-                <span className="italic">fonctionne impeccablement</span> sans
-                que l&apos;on ne voie jamais les rouages.&rdquo;
-              </h2>
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-px h-24 bg-primary" />
-                <span className="font-body uppercase tracking-widest text-xs font-bold text-primary">
-                  Directrice de l&apos;Atelier SDL
-                </span>
-              </div>
+          <div className="max-w-4xl space-y-12">
+            <h2 className="font-headline text-4xl md:text-6xl leading-tight">
+              <WordReveal>
+                {"\u201cLa véritable élégance réside dans un système qui fonctionne impeccablement sans que l\u2019on ne voie jamais les rouages.\u201d"}
+              </WordReveal>
+            </h2>
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-px h-24 bg-primary" />
+              <span className="font-body uppercase tracking-widest text-xs font-bold text-primary">
+                Directrice de l&apos;Atelier SDL
+              </span>
             </div>
-          </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

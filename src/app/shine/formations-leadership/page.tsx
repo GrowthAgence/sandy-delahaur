@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title:
@@ -374,18 +375,19 @@ export default function FormationsLeadershipPage() {
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]" />
           </div>
-          <RevealOnScroll className="relative z-10 max-w-3xl mx-auto">
+          <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl mb-12 leading-tight italic">
-              Pr&ecirc;te &agrave; incarner <br />
-              votre pleine puissance&nbsp;?
+              <WordReveal wordClassName="italic">{"Prête à incarner votre pleine puissance\u00a0?"}</WordReveal>
             </h2>
-            <a
-              href="#pricing"
-              className="border-b-2 border-primary text-primary px-2 py-4 font-body font-extrabold uppercase tracking-[0.3em] text-lg md:text-xl hover:text-white hover:border-white transition-all duration-500 inline-block"
-            >
-              Voir les formations disponibles
-            </a>
-          </RevealOnScroll>
+            <RevealOnScroll delay={0.6}>
+              <a
+                href="#pricing"
+                className="border-b-2 border-primary text-primary px-2 py-4 font-body font-extrabold uppercase tracking-[0.3em] text-lg md:text-xl hover:text-white hover:border-white transition-all duration-500 inline-block"
+              >
+                <WordReveal delay={0.8} stagger={0.1}>{"Voir les formations disponibles"}</WordReveal>
+              </a>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

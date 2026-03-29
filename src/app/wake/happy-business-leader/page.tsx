@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Happy Business Leader — Bootcamp 2\u00a0500\u20ac | SDL Agency",

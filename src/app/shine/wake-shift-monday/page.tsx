@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Wake Shift Monday — SDL Agency | Abonnement hebdomadaire SHINE",
@@ -248,17 +249,19 @@ export default function WakeShiftMondayPage() {
               WAKE SHIFT
             </span>
           </div>
-          <RevealOnScroll className="relative z-10">
+          <div className="relative z-10">
             <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl mb-12">
-              Pr&ecirc;te pour le prochain lundi&nbsp;?
+              <WordReveal>{"Prête pour le prochain lundi\u00a0?"}</WordReveal>
             </h2>
-            <Link
-              href="/#contact"
-              className="btn-shimmer text-on-primary px-12 md:px-16 py-6 md:py-8 font-body tracking-[0.3em] uppercase text-[10px] font-black inline-block hover:scale-105 transition-transform duration-500 shadow-[0_0_60px_rgba(212,175,55,0.3)]"
-            >
-              Je rejoins Wake Shift Monday
-            </Link>
-          </RevealOnScroll>
+            <RevealOnScroll delay={0.6}>
+              <Link
+                href="/#contact"
+                className="btn-shimmer text-on-primary px-12 md:px-16 py-6 md:py-8 font-body tracking-[0.3em] uppercase text-[10px] font-black inline-block hover:scale-105 transition-transform duration-500 shadow-[0_0_60px_rgba(212,175,55,0.3)]"
+              >
+                <WordReveal delay={0.8} stagger={0.1}>{"Je rejoins Wake Shift Monday"}</WordReveal>
+              </Link>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

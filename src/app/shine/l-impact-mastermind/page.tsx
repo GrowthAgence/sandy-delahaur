@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 import CandidatureForm from "./CandidatureForm";
 
 export const metadata: Metadata = {
@@ -259,7 +260,7 @@ export default function LImpactMastermindPage() {
                 S&eacute;lection en cours
               </span>
               <h2 className="font-headline text-5xl md:text-6xl mb-6">
-                Rejoindre L&apos;Impact
+                <WordReveal>{"Rejoindre L\u2019Impact"}</WordReveal>
               </h2>
               <p className="font-body text-on-surface-variant italic font-light">
                 La s&eacute;lection est rigoureuse. Elle commence ici.

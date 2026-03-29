@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Masterclass Pitch — 35\u20ac | SDL Agency",
@@ -266,26 +267,28 @@ export default function MasterclassPitchPage() {
         {/* Final Call to Action */}
         <section className="py-32 px-6 md:px-8 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/5 -skew-y-3 pointer-events-none" />
-          <RevealOnScroll className="max-w-4xl mx-auto space-y-12 relative z-10">
+          <div className="max-w-4xl mx-auto space-y-12 relative z-10">
             <h2 className="text-5xl font-headline">
-              Pr&ecirc;t &agrave; briller&nbsp;?
+              <WordReveal>{"Prêt à briller\u00a0?"}</WordReveal>
             </h2>
             <p className="text-xl text-on-surface-variant max-w-xl mx-auto font-body">
               Places limit&eacute;es &agrave; 12 participants par session pour
               garantir une interaction de haute qualit&eacute;.
             </p>
-            <div className="flex flex-col items-center gap-6">
-              <Link
-                href="/#contact"
-                className="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-16 py-6 font-bold text-lg tracking-[0.2em] uppercase hover:shadow-[0_0_40px_rgba(242,202,80,0.2)] transition-all font-body"
-              >
-                R&Eacute;SERVER MA PLACE &mdash; 35&euro;
-              </Link>
+            <RevealOnScroll delay={0.6}>
+              <div className="flex flex-col items-center gap-6">
+                <Link
+                  href="/#contact"
+                  className="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-16 py-6 font-bold text-lg tracking-[0.2em] uppercase hover:shadow-[0_0_40px_rgba(242,202,80,0.2)] transition-all font-body"
+                >
+                  <WordReveal delay={0.8} stagger={0.1}>{"RÉSERVER MA PLACE — 35\u20ac"}</WordReveal>
+                </Link>
               <p className="text-xs text-outline uppercase tracking-widest font-body">
                 Paiement s&eacute;curis&eacute; via Stripe
               </p>
-            </div>
-          </RevealOnScroll>
+              </div>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title:
@@ -263,32 +264,34 @@ export default function AccompagnementAccelerationPage() {
 
         {/* CTA Section */}
         <section className="px-6 md:px-12 py-40 bg-surface border-y border-white/5">
-          <RevealOnScroll>
-            <div className="max-w-5xl mx-auto text-center">
-              <h2 className="font-headline text-5xl md:text-7xl mb-12 leading-tight tracking-tight">
-                Pr&ecirc;te &agrave; passer en phase{" "}
-                <span className="italic text-primary">SHIFT</span> ?
-              </h2>
-              <p className="font-body text-on-surface-variant mb-16 text-xl max-w-2xl mx-auto font-light">
-                Les places sont limit&eacute;es &agrave; 3 dossiers par
-                trimestre pour garantir une immersion totale.
-              </p>
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="font-headline text-5xl md:text-7xl mb-12 leading-tight tracking-tight">
+              <WordReveal>{"Prête à passer en phase"}</WordReveal>{" "}
+              <span className="italic text-primary">
+                <WordReveal delay={0.4} wordClassName="text-primary italic">{"SHIFT\u00a0?"}</WordReveal>
+              </span>
+            </h2>
+            <p className="font-body text-on-surface-variant mb-16 text-xl max-w-2xl mx-auto font-light">
+              Les places sont limit&eacute;es &agrave; 3 dossiers par
+              trimestre pour garantir une immersion totale.
+            </p>
+            <RevealOnScroll delay={0.8}>
               <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
                 <a
                   href="#"
                   className="bg-primary-container text-on-primary px-16 py-6 font-body uppercase tracking-[0.2em] text-xs font-black hover:brightness-110 transition-all min-w-[280px] text-center"
                 >
-                  Postuler maintenant
+                  <WordReveal delay={1.0} stagger={0.12}>{"Postuler maintenant"}</WordReveal>
                 </a>
                 <a
                   href="#"
                   className="border border-primary/30 text-white px-16 py-6 font-body uppercase tracking-[0.2em] text-xs font-bold hover:bg-white/5 transition-all min-w-[280px] text-center"
                 >
-                  Consulter le B2B
+                  <WordReveal delay={1.2} stagger={0.12}>{"Consulter le B2B"}</WordReveal>
                 </a>
               </div>
-            </div>
-          </RevealOnScroll>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

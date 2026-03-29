@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "À propos de Sandy — Souffle de Lumière | SDL Agency",
@@ -578,11 +579,9 @@ export default function AProposPage() {
         <section className="py-24 md:py-32 bg-surface">
           <div className="container mx-auto px-6 md:px-12 text-center">
             <div className="max-w-2xl mx-auto">
-              <RevealOnScroll>
-                <h2 className="font-headline font-black text-4xl md:text-6xl mb-8 leading-[1.1] tracking-tighter text-white">
-                  Et toi&nbsp;?
-                </h2>
-              </RevealOnScroll>
+              <h2 className="font-headline font-black text-4xl md:text-6xl mb-8 leading-[1.1] tracking-tighter text-white">
+                <WordReveal>{"Et toi\u00a0?"}</WordReveal>
+              </h2>
               <RevealOnScroll delay={0.1}>
                 <div className="font-body text-on-surface-variant text-lg leading-relaxed space-y-6 font-light mb-12">
                   <p>
@@ -606,12 +605,12 @@ export default function AProposPage() {
                   </p>
                 </div>
               </RevealOnScroll>
-              <RevealOnScroll delay={0.2}>
+              <RevealOnScroll delay={0.6}>
                 <Link
                   href="/#contact"
                   className="btn-shimmer text-on-primary px-12 md:px-16 py-5 md:py-6 font-body text-[10px] uppercase tracking-[0.2em] font-bold hover:scale-105 transition-transform duration-700 inline-block"
                 >
-                  Je prends rendez-vous
+                  <WordReveal delay={0.8} stagger={0.1}>{"Je prends rendez-vous"}</WordReveal>
                 </Link>
               </RevealOnScroll>
             </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "WAKE — Phase de Repositionnement Strat&eacute;gique | SDL Agency",
@@ -224,25 +225,27 @@ export default function WakePage() {
 
         {/* Bottom CTA */}
         <section className="py-32 bg-surface">
-          <RevealOnScroll className="max-w-4xl mx-auto px-6 text-center">
+          <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="font-headline text-4xl md:text-6xl mb-12">
-              Pr&ecirc;te &agrave; r&eacute;veiller votre potentiel&nbsp;?
+              <WordReveal>{"Prête à réveiller votre potentiel\u00a0?"}</WordReveal>
             </h2>
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Link
-                href="/#contact"
-                className="bg-primary text-on-primary px-12 py-5 text-xs tracking-[0.3em] font-bold uppercase transition-transform active:scale-95 text-center"
-              >
-                Prendre rendez-vous
-              </Link>
-              <Link
-                href="/"
-                className="border border-outline px-12 py-5 text-xs tracking-[0.3em] font-bold uppercase hover:bg-white/5 transition-all active:scale-95 text-center"
-              >
-                Voir les autres phases
-              </Link>
-            </div>
-          </RevealOnScroll>
+            <RevealOnScroll delay={0.8}>
+              <div className="flex flex-col md:flex-row gap-6 justify-center">
+                <Link
+                  href="/#contact"
+                  className="bg-primary text-on-primary px-12 py-5 text-xs tracking-[0.3em] font-bold uppercase transition-transform active:scale-95 text-center"
+                >
+                  <WordReveal delay={1.0} stagger={0.1}>{"Prendre rendez-vous"}</WordReveal>
+                </Link>
+                <Link
+                  href="/"
+                  className="border border-outline px-12 py-5 text-xs tracking-[0.3em] font-bold uppercase hover:bg-white/5 transition-all active:scale-95 text-center"
+                >
+                  <WordReveal delay={1.2} stagger={0.1}>{"Voir les autres phases"}</WordReveal>
+                </Link>
+              </div>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Journ\u00e9e d\u2019Acc\u00e9l\u00e9ration — Intensive sur mesure | SDL Agency",
@@ -299,17 +300,19 @@ export default function JourneeAccelerationPage() {
 
         {/* Final CTA */}
         <section className="py-32 px-6 md:px-12 bg-surface text-center">
-          <RevealOnScroll className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-headline text-5xl md:text-6xl mb-12">
-              Le temps est la seule ressource que vous ne pouvez pas racheter.
+              <WordReveal>{"Le temps est la seule ressource que vous ne pouvez pas racheter."}</WordReveal>
             </h2>
-            <Link
-              href="/#contact"
-              className="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-16 py-6 font-body tracking-[0.3em] uppercase text-sm font-black active:scale-95 transition-transform shadow-xl shadow-primary/20"
-            >
-              R&eacute;server ma journ&eacute;e &rarr;
-            </Link>
-          </RevealOnScroll>
+            <RevealOnScroll delay={1.0}>
+              <Link
+                href="/#contact"
+                className="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-16 py-6 font-body tracking-[0.3em] uppercase text-sm font-black active:scale-95 transition-transform shadow-xl shadow-primary/20"
+              >
+                <WordReveal delay={1.2} stagger={0.1}>{"Réserver ma journée →"}</WordReveal>
+              </Link>
+            </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

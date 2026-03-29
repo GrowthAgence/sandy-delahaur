@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Queen CEO Builder \u2014 Le Programme Flagship | SDL Agency",
@@ -435,33 +436,26 @@ export default function QueenCeoBuilderPage() {
 
         {/* Final CTA */}
         <section id="cta" className="py-40 relative text-center">
-          <div
-            className="absolute inset-0 opacity-20 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(242, 202, 80, 0.08) 0%, transparent 70%)",
-            }}
-          />
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8 relative z-10 space-y-12">
-            <RevealOnScroll>
-              <h2 className="text-5xl md:text-7xl font-headline font-light">
-                Pr&ecirc;te &agrave; b&acirc;tir votre{" "}
-                <span className="italic">Empire</span> ?
-              </h2>
-            </RevealOnScroll>
+            <h2 className="text-5xl md:text-7xl font-headline font-light">
+              <WordReveal>{"Prête à bâtir votre"}</WordReveal>{" "}
+              <span className="italic">
+                <WordReveal delay={0.4} wordClassName="italic">{"Empire\u00a0?"}</WordReveal>
+              </span>
+            </h2>
             <RevealOnScroll delay={0.15}>
               <p className="text-on-surface-variant max-w-2xl mx-auto text-xl font-body font-light">
                 Les places pour la prochaine cohorte sont limit&eacute;es pour
                 garantir une proximit&eacute; d&apos;&eacute;lite.
               </p>
             </RevealOnScroll>
-            <RevealOnScroll delay={0.3}>
+            <RevealOnScroll delay={0.6}>
               <div className="pt-8">
                 <a
                   href="#"
                   className="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary px-16 py-8 font-body text-lg font-bold tracking-widest uppercase shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:scale-105 transition-all"
                 >
-                  Postuler au programme
+                  <WordReveal delay={0.8} stagger={0.12}>{"Postuler au programme"}</WordReveal>
                 </a>
               </div>
             </RevealOnScroll>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title:
@@ -259,27 +260,29 @@ export default function AtelierDeclicVisibilitePage() {
 
         {/* Final CTA */}
         <section id="cta" className="py-40 px-6 md:px-24 bg-surface-container">
-          <RevealOnScroll>
-            <div className="max-w-4xl mx-auto text-center">
-              <span className="font-body text-[10px] tracking-[0.4em] uppercase text-primary mb-8 block font-extrabold">
-                Acc&egrave;s Exclusif
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="font-body text-[10px] tracking-[0.4em] uppercase text-primary mb-8 block font-extrabold">
+              Acc&egrave;s Exclusif
+            </span>
+            <h2 className="font-headline text-5xl md:text-8xl mb-12 leading-tight font-bold">
+              <WordReveal>{"Prêt pour le"}</WordReveal>{" "}
+              <span className="italic text-primary">
+                <WordReveal delay={0.3} wordClassName="text-primary italic">{"Déclic\u00a0?"}</WordReveal>
               </span>
-              <h2 className="font-headline text-5xl md:text-8xl mb-12 leading-tight font-bold">
-                Pr&ecirc;t pour le{" "}
-                <span className="italic text-primary">D&eacute;clic</span> ?
-              </h2>
-              <a
-                href="#"
-                className="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary px-16 py-6 font-body font-black uppercase tracking-[0.2em] text-sm shadow-2xl hover:brightness-110 transition-all"
-              >
-                Rejoindre l&apos;Atelier &mdash; 490&euro;
-              </a>
+            </h2>
+              <RevealOnScroll delay={0.6}>
+                <a
+                  href="#"
+                  className="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary px-16 py-6 font-body font-black uppercase tracking-[0.2em] text-sm shadow-2xl hover:brightness-110 transition-all"
+                >
+                  <WordReveal delay={0.8} stagger={0.1}>{"Rejoindre l\u2019Atelier — 490\u20ac"}</WordReveal>
+                </a>
+              </RevealOnScroll>
               <p className="mt-8 text-on-surface-variant font-light italic font-body">
                 Limit&eacute; &agrave; 12 participants par session pour
                 garantir un accompagnement sur-mesure.
               </p>
-            </div>
-          </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />

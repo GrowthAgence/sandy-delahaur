@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import WordReveal from "@/components/WordReveal";
 
 export const metadata: Metadata = {
   title: "Booster The Career — \u00c0 partir de 2\u00a0800\u20ac | SDL Agency",
@@ -341,14 +342,14 @@ export default function BoosterTheCareerPage() {
           <h2 className="font-headline text-5xl lg:text-8xl mb-12 opacity-10 select-none">
             RENAISSANCE
           </h2>
-          <RevealOnScroll className="-mt-24 relative z-10">
+          <div className="-mt-24 relative z-10">
             <p className="font-headline italic text-3xl text-white mb-12">
-              Le premier jour de votre nouvelle &egrave;re commence ici.
+              <WordReveal>{"Le premier jour de votre nouvelle ère commence ici."}</WordReveal>
             </p>
             <div className="flex justify-center">
               <div className="w-px h-24 bg-primary/40" />
             </div>
-          </RevealOnScroll>
+          </div>
         </section>
       </main>
       <Footer />
