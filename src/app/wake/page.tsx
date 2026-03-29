@@ -79,27 +79,35 @@ export default function WakePage() {
       <Navbar />
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="relative min-h-[819px] flex items-center overflow-hidden">
+        <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
           {/* Background gradient overlay */}
           <div className="absolute inset-0 z-0">
             <div className="w-full h-full bg-gradient-to-br from-surface-container-low via-surface to-surface" />
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent" />
           </div>
-          <RevealOnScroll className="relative z-10 px-6 md:px-12 max-w-5xl">
-            <span className="font-body text-[0.75rem] uppercase tracking-[0.3em] text-primary mb-6 block">
-              The Digital Atelier &mdash; Wake
-            </span>
-            <h1 className="font-headline text-5xl md:text-8xl font-black leading-tight mb-8">
-              Avant de vendre, il faut savoir{" "}
-              <span className="italic font-light text-primary">quoi</span>{" "}
-              vendre &mdash; et &agrave; qui.
-            </h1>
-            <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
-              WAKE, c&apos;est la phase de repositionnement strat&eacute;gique.
-              Nous d&eacute;construisons pour mieux reb&acirc;tir votre
-              autorit&eacute; sur le march&eacute;.
-            </p>
-          </RevealOnScroll>
+          <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="max-w-4xl">
+              <RevealOnScroll>
+                <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
+                  The Digital Atelier &mdash; Wake
+                </span>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.15}>
+                <h1 className="font-headline font-black mb-8 leading-[1.1] tracking-tighter text-white text-4xl md:text-6xl lg:text-7xl">
+                  Avant de vendre, il faut savoir{" "}
+                  <span className="text-gold-gradient italic">quoi</span>{" "}
+                  vendre &mdash; et &agrave; qui.
+                </h1>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.3}>
+                <p className="font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light">
+                  WAKE, c&apos;est la phase de repositionnement strat&eacute;gique.
+                  Nous d&eacute;construisons pour mieux reb&acirc;tir votre
+                  autorit&eacute; sur le march&eacute;.
+                </p>
+              </RevealOnScroll>
+            </div>
+          </div>
         </section>
 
         {/* Signature Quote */}

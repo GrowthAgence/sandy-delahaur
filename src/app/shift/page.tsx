@@ -50,37 +50,36 @@ export default function ShiftPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex flex-col justify-center items-start px-6 md:px-24 py-24 overflow-hidden">
+        <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
           <div className="absolute inset-0 z-0">
             <div className="w-full h-full bg-gradient-to-br from-surface-container-low via-surface to-surface opacity-80" />
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent" />
           </div>
-          <div className="relative z-10 max-w-4xl space-y-8">
-            <RevealOnScroll>
-              <p className="font-body uppercase tracking-[0.4em] text-primary text-sm font-bold">
-                L&apos;&Eacute;RE DE LA TRANSFORMATION
-              </p>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.15}>
-              <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-tight font-black">
-                Tu sais ce que{" "}
-                <span className="text-gold-gradient italic">tu vends.</span>
-                <br />
-                Maintenant, construis le syst&egrave;me qui le vend{" "}
-                <span className="italic">pour toi.</span>
-              </h1>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.3}>
-              <div className="w-32 h-1 bg-primary" />
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.4}>
-              <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed font-body">
-                SHIFT, c&apos;est la phase de construction. L&apos;instant
-                o&ugrave; l&apos;on d&eacute;laisse l&apos;artisanat pour
-                l&apos;ing&eacute;nierie. C&apos;est ici que votre vision
-                devient une machine de guerre esth&eacute;tique et performante.
-              </p>
-            </RevealOnScroll>
+          <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="max-w-4xl">
+              <RevealOnScroll>
+                <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
+                  L&apos;&Eacute;re de la Transformation
+                </span>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.15}>
+                <h1 className="font-headline font-black mb-8 leading-[1.1] tracking-tighter text-white text-4xl md:text-6xl lg:text-7xl">
+                  Tu sais ce que{" "}
+                  <span className="text-gold-gradient italic">tu vends.</span>
+                  <br className="hidden md:block" />
+                  Maintenant, construis le syst&egrave;me qui le vend{" "}
+                  <span className="italic">pour toi.</span>
+                </h1>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.3}>
+                <p className="font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light">
+                  SHIFT, c&apos;est la phase de construction. L&apos;instant
+                  o&ugrave; l&apos;on d&eacute;laisse l&apos;artisanat pour
+                  l&apos;ing&eacute;nierie. C&apos;est ici que votre vision
+                  devient une machine de guerre esth&eacute;tique et performante.
+                </p>
+              </RevealOnScroll>
+            </div>
           </div>
         </section>
 

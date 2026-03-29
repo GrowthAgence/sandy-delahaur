@@ -49,7 +49,7 @@ export default function ShinePage() {
       <Navbar />
       <main className="pt-24 overflow-x-hidden">
         {/* ── Hero Section ── */}
-        <section className="relative min-h-[90vh] flex items-center px-6 md:px-12 lg:px-32 py-20 bg-surface">
+        <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
           {/* Background radial glow */}
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10" />
@@ -59,42 +59,33 @@ export default function ShinePage() {
           {/* Lumi&egrave;re bloom effect */}
           <div className="absolute -right-1/4 top-1/4 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(242,202,80,0.08)_0%,transparent_70%)] pointer-events-none" />
 
-          <RevealOnScroll className="relative z-20 max-w-4xl space-y-12">
-            <div className="space-y-4">
-              <span className="text-primary tracking-[0.3em] font-body text-[10px] uppercase block">
-                The Pinnacle of Leadership
-              </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black leading-tight text-white">
-                Tu n&apos;as plus besoin <br />
-                <span className="text-gold-gradient italic">d&apos;&ecirc;tre visible.</span>{" "}
-                <br />
-                Tu as besoin <br />
-                <span className="italic">d&apos;impacter.</span>
-              </h1>
-            </div>
-
-            <p className="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl leading-relaxed">
+          <div className="container mx-auto px-6 md:px-12 relative z-20">
+            <div className="max-w-4xl">
+              <RevealOnScroll>
+                <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
+                  The Pinnacle of Leadership
+                </span>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.15}>
+                <h1 className="font-headline font-black mb-8 leading-[1.1] tracking-tighter text-white text-4xl md:text-6xl lg:text-7xl">
+                  Tu n&apos;as plus besoin{" "}
+                  <br className="hidden md:block" />
+                  <span className="text-gold-gradient italic">d&apos;&ecirc;tre visible.</span>{" "}
+                  Tu as besoin{" "}
+                  <br className="hidden md:block" />
+                  d&apos;impacter.
+                </h1>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.3}>
+                <p className="font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light">
               Le passage du &laquo;&nbsp;faire&nbsp;&raquo; au
               &laquo;&nbsp;diriger&nbsp;&raquo;. Pour les femmes d&apos;affaires
               qui ne cherchent plus &agrave; prouver, mais &agrave; laisser une
               empreinte ind&eacute;l&eacute;bile.
-            </p>
-
-            <div className="flex flex-wrap gap-6 pt-6">
-              <a
-                href="#offres"
-                className="btn-shimmer text-on-primary px-10 py-4 font-bold text-sm font-body uppercase tracking-[0.15em] hover:scale-105 transition-transform"
-              >
-                Explore SHINE
-              </a>
-              <Link
-                href="/shine/l-impact-mastermind"
-                className="border border-outline-variant/30 text-primary px-10 py-4 font-bold text-sm font-body hover:bg-white/5 transition-colors"
-              >
-                L&apos;Impact Mastermind
-              </Link>
+                </p>
+              </RevealOnScroll>
             </div>
-          </RevealOnScroll>
+          </div>
         </section>
 
         {/* ── The Philosophy: Asymmetric Layout ── */}

@@ -98,39 +98,43 @@ export default function EvenementsPage() {
       <Navbar />
       <main>
         {/* ═══ Hero ═══ */}
-        <header className="relative min-h-dvh flex flex-col justify-center px-6 md:px-12 overflow-hidden bg-surface">
+        <header className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
           {/* Background gradient placeholder */}
           <div className="absolute inset-0 z-0 opacity-40">
             <div className="w-full h-full bg-gradient-to-br from-surface-container-highest via-surface-container to-surface opacity-50" />
           </div>
 
-          <RevealOnScroll className="relative z-10 max-w-5xl mt-24">
-            <div className="mb-6 flex items-center gap-4">
-              <div className="h-px w-12 bg-primary" />
-              <span className="font-body uppercase tracking-[0.3em] text-[10px] text-primary">
-                Modern Social Club
-              </span>
+          <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="max-w-4xl">
+              <RevealOnScroll>
+                <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
+                  Modern Social Club
+                </span>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.15}>
+                <h1 className="font-headline font-black mb-8 leading-[1.1] tracking-tighter text-white text-4xl md:text-6xl lg:text-7xl">
+                  Le club o&ugrave; les{" "}
+                  <span
+                    className="italic"
+                    style={{
+                      WebkitTextStroke: "1px #D4AF37",
+                      color: "transparent",
+                    }}
+                  >
+                    femmes
+                  </span>{" "}
+                  ambitieuses se retrouvent.
+                </h1>
+              </RevealOnScroll>
+              <RevealOnScroll delay={0.3}>
+                <p className="font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light">
+                  Modern Social Club, c&apos;est l&apos;entr&eacute;e dans
+                  l&apos;univers SDL par l&apos;exp&eacute;rience... Un espace
+                  o&ugrave; l&apos;influence rencontre l&apos;&eacute;l&eacute;gance.
+                </p>
+              </RevealOnScroll>
             </div>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-9xl mb-12 leading-none font-black">
-              Le club o&ugrave; les <br />
-              <span
-                className="italic"
-                style={{
-                  WebkitTextStroke: "1px #D4AF37",
-                  color: "transparent",
-                }}
-              >
-                femmes
-              </span>{" "}
-              <br />
-              ambitieuses se retrouvent.
-            </h1>
-            <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
-              Modern Social Club, c&apos;est l&apos;entr&eacute;e dans
-              l&apos;univers SDL par l&apos;exp&eacute;rience... Un espace
-              o&ugrave; l&apos;influence rencontre l&apos;&eacute;l&eacute;gance.
-            </p>
-          </RevealOnScroll>
+          </div>
         </header>
 
         {/* ═══ Pourquoi des événements? ═══ */}
