@@ -254,7 +254,7 @@ export default function EntreprisesPage() {
                       </ul>
                     </div>
 
-                    {/* Image placeholder column */}
+                    {/* Visual column */}
                     <div
                       className={`w-full md:w-1/2 ${
                         item.imageFirst
@@ -262,13 +262,28 @@ export default function EntreprisesPage() {
                           : "order-1 md:order-2"
                       }`}
                     >
-                      <div
-                        className={`${
-                          item.imageFirst
-                            ? "aspect-[16/9]"
-                            : "aspect-[4/5]"
-                        } bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low`}
-                      />
+                      {idx === 0 ? (
+                        <video
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full aspect-[4/5] object-cover"
+                        >
+                          <source
+                            src="/videos/leadership-feminin.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      ) : (
+                        <div
+                          className={`${
+                            item.imageFirst
+                              ? "aspect-[16/9]"
+                              : "aspect-[4/5]"
+                          } bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low`}
+                        />
+                      )}
                     </div>
                   </div>
                 </RevealOnScroll>
