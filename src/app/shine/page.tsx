@@ -64,9 +64,9 @@ export default function ShinePage() {
               <span className="text-primary tracking-[0.3em] font-body text-[10px] uppercase block">
                 The Pinnacle of Leadership
               </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-light italic leading-tight text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black leading-tight text-white">
                 Tu n&apos;as plus besoin <br />
-                <span className="text-gold-gradient">d&apos;&ecirc;tre visible.</span>{" "}
+                <span className="text-gold-gradient italic">d&apos;&ecirc;tre visible.</span>{" "}
                 <br />
                 Tu as besoin <br />
                 <span className="italic">d&apos;impacter.</span>

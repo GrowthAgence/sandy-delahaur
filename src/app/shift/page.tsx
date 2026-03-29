@@ -62,12 +62,12 @@ export default function ShiftPage() {
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={0.15}>
-              <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-tight font-black italic">
+              <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-tight font-black">
                 Tu sais ce que{" "}
-                <span className="text-gold-gradient">tu vends.</span>
+                <span className="text-gold-gradient italic">tu vends.</span>
                 <br />
                 Maintenant, construis le syst&egrave;me qui le vend{" "}
-                <span className="italic font-normal">pour toi.</span>
+                <span className="italic">pour toi.</span>
               </h1>
             </RevealOnScroll>
             <RevealOnScroll delay={0.3}>

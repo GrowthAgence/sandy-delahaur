@@ -111,10 +111,10 @@ export default function EvenementsPage() {
                 Modern Social Club
               </span>
             </div>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-9xl mb-12 leading-none italic font-black">
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-9xl mb-12 leading-none font-black">
               Le club o&ugrave; les <br />
               <span
-                className="not-italic"
+                className="italic"
                 style={{
                   WebkitTextStroke: "1px #D4AF37",
                   color: "transparent",

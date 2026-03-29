@@ -95,7 +95,7 @@ export default function EntreprisesPage() {
               <span className="inline-block font-body text-[10px] uppercase tracking-[0.3em] text-primary-container mb-6">
                 B2B Solutions &amp; Corporate Excellence
               </span>
-              <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-white mb-8">
+              <h1 className="font-headline font-black text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-white mb-8">
                 Vous voulez d&eacute;velopper le{" "}
                 <span className="italic text-primary">leadership</span> et les
                 performances commerciales de vos &eacute;quipes
