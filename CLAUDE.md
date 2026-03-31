@@ -42,6 +42,11 @@ accent: text-gold-gradient italic (sur span uniquement, jamais italic sur le h1)
 subtitle: font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light
 ```
 
+## Animations
+- `RevealOnScroll` : fade-in + slide-up au scroll (motion/react whileInView)
+- `WordReveal` : mot par mot avec blur + slide-up au scroll — utilisé sur tous les CTA de fin de page (titre + sous-titre + boutons)
+- Ne pas utiliser les deux sur le même élément (WordReveal remplace RevealOnScroll pour le texte)
+
 ## ESLint
 - Flat config (`eslint.config.mjs`), pas de `.eslintignore`
 - `.claude/**` dans globalIgnores pour exclure les worktrees agents

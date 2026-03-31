@@ -286,16 +286,25 @@ export default function AProposPage() {
         <section className="py-24 md:py-32 bg-surface-container-lowest">
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-3xl mx-auto">
-              <RevealOnScroll>
-                <h2 className="font-headline font-black text-3xl md:text-5xl lg:text-6xl mb-12 leading-[1.1] tracking-tighter text-white text-center">
-                  Il y a des &eacute;v&eacute;nements qui te{" "}
-                  <span className="text-gold-gradient italic">marquent.</span>
-                  <br /> Et il y en a qui te{" "}
-                  <span className="text-gold-gradient italic">
-                    transforment.
-                  </span>
-                </h2>
-              </RevealOnScroll>
+              <h2 className="font-headline font-black text-3xl md:text-5xl lg:text-6xl mb-12 leading-[1.1] tracking-tighter text-white text-center">
+                <WordReveal>
+                  {"Il y a des événements qui te"}
+                </WordReveal>{" "}
+                <span className="text-gold-gradient italic">
+                  <WordReveal delay={0.5} wordClassName="text-gold-gradient italic">
+                    {"marquent."}
+                  </WordReveal>
+                </span>
+                <br />
+                <WordReveal delay={0.7}>
+                  {"Et il y en a qui te"}
+                </WordReveal>{" "}
+                <span className="text-gold-gradient italic">
+                  <WordReveal delay={1.0} wordClassName="text-gold-gradient italic">
+                    {"transforment."}
+                  </WordReveal>
+                </span>
+              </h2>
               <RevealOnScroll delay={0.1}>
                 <div className="font-body text-on-surface-variant text-lg leading-relaxed space-y-6 font-light">
                   <p className="text-white font-normal">
@@ -362,16 +371,21 @@ export default function AProposPage() {
             </div>
 
             {/* Citation visuelle isolée */}
-            <RevealOnScroll delay={0.2}>
-              <div className="my-16 md:my-24 py-16 md:py-24 px-8 bg-surface-container-high gold-border-subtle text-center max-w-4xl mx-auto">
-                <p className="font-headline font-black italic text-2xl md:text-4xl lg:text-5xl text-white leading-tight tracking-tighter">
-                  &laquo;&nbsp;Ce n&apos;est pas l&apos;information qui change
-                  une vie. C&apos;est le{" "}
-                  <span className="text-gold-gradient">passage.</span>
-                  &nbsp;&raquo;
-                </p>
-              </div>
-            </RevealOnScroll>
+            <div className="my-16 md:my-24 py-16 md:py-24 px-8 bg-surface-container-high gold-border-subtle text-center max-w-4xl mx-auto">
+              <p className="font-headline font-black italic text-2xl md:text-4xl lg:text-5xl text-white leading-tight tracking-tighter">
+                <WordReveal>
+                  {"«\u00a0Ce n'est pas l'information qui change une vie. C'est le"}
+                </WordReveal>{" "}
+                <span className="text-gold-gradient">
+                  <WordReveal delay={0.8} wordClassName="text-gold-gradient">
+                    {"passage."}
+                  </WordReveal>
+                </span>
+                <WordReveal delay={1.0}>
+                  {"\u00a0»"}
+                </WordReveal>
+              </p>
+            </div>
 
             <div className="max-w-3xl mx-auto">
               <RevealOnScroll delay={0.1}>
@@ -424,7 +438,7 @@ export default function AProposPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 md:mb-24">
               {PILIERS.map((pilier, i) => (
                 <RevealOnScroll key={pilier.title} delay={i * 0.1}>
-                  <div className="bg-surface p-10 gold-border-subtle card-depth h-full">
+                  <div className="bg-surface p-10 gold-border-subtle card-depth h-full hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_8px_32px_rgba(242,202,80,0.08)] transition-all duration-500 cursor-default">
                     <div className="mb-6">{pilier.icon}</div>
                     <h3 className="font-headline text-xl font-bold mb-4 text-white">
                       {pilier.title}
@@ -505,9 +519,9 @@ export default function AProposPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
               {FORCES.map((force, i) => (
                 <RevealOnScroll key={force.text} delay={i * 0.1}>
-                  <div className="bg-surface-container-high p-10 gold-border-subtle text-center h-full flex flex-col items-center">
-                    <div className="mb-6">{force.icon}</div>
-                    <p className="font-headline text-lg text-white leading-snug">
+                  <div className="bg-surface-container-high p-10 gold-border-subtle text-center h-full flex flex-col items-center group hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_8px_32px_rgba(242,202,80,0.08)] transition-all duration-500 cursor-default">
+                    <div className="mb-6 group-hover:scale-110 group-hover:text-primary transition-all duration-500">{force.icon}</div>
+                    <p className="font-headline text-lg text-white leading-snug group-hover:text-primary transition-colors duration-500">
                       {force.text}
                     </p>
                   </div>

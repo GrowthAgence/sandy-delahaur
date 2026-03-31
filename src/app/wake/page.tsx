@@ -128,10 +128,13 @@ export default function WakePage() {
                 </svg>
               </div>
               <h2 className="font-headline text-3xl md:text-5xl italic font-medium leading-relaxed max-w-4xl mx-auto">
-                &laquo;&nbsp;On ne vend pas sur les r&eacute;seaux ce qu&apos;on
-                ne sait pas vendre dans la vraie vie.&nbsp;&raquo;
+                <WordReveal>
+                  {"«\u00a0On ne vend pas sur les réseaux ce qu'on ne sait pas vendre dans la vraie vie.\u00a0»"}
+                </WordReveal>
               </h2>
-              <div className="mt-12 h-px w-24 bg-primary mx-auto" />
+              <RevealOnScroll delay={1.2}>
+                <div className="mt-12 h-px w-24 bg-primary mx-auto" />
+              </RevealOnScroll>
             </RevealOnScroll>
           </div>
         </section>

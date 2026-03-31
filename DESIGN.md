@@ -83,7 +83,10 @@ section.min-h-dvh.flex.items-center.pt-24.overflow-hidden.bg-surface
 ```
 
 ### RevealOnScroll
-Composant d'animation scroll-triggered. Accepte `delay` et `className`.
+Composant d'animation scroll-triggered (motion/react `whileInView`). Accepte `delay` et `className`.
+
+### WordReveal
+Animation mot par mot scroll-triggered. Chaque mot apparaît avec slide-up + blur qui se dissipe, en cascade (stagger). Props : `children` (string), `delay`, `stagger` (défaut 0.08s), `wordClassName`. Utilisé sur tous les titres et boutons des sections CTA de fin de page.
 
 ### Footer
 Composant global partagé entre toutes les pages.
@@ -113,6 +116,9 @@ Grille 2x2 ou 4 colonnes, chiffre en `font-headline font-black text-3xl md:text-
 
 ### Blocs distincts (forces, piliers)
 Cards avec icône SVG + titre + description, fond `surface` ou `surface-container-high`, bordure `gold-border-subtle`.
+
+### CTA de fin de page
+Sections CTA avec WordReveal sur titre + sous-titre + bouton(s). Le titre se révèle mot par mot au scroll, le sous-titre suit, puis le bouton slide-up (RevealOnScroll) avec texte WordReveal. Présent sur 14 pages (homepage, wake/*, shift/*, shine/*, a-propos).
 
 ### Alternance fond
 Alterner `bg-surface` → `bg-surface-container-low` → `bg-surface-container-lowest` pour la rupture visuelle entre sections.
