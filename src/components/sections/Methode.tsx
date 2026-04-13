@@ -5,7 +5,7 @@ const PHASES = [
     number: "01",
     name: "Wake",
     description:
-      "Tu te repositionnes. Tu clarifies ce que tu vends, à qui, et pourquoi ça marche dans la vraie vie avant d'aller sur les réseaux.",
+      "Avant d'être visible, il faut être claire. On clarifie ton message, ton offre et ta posture pour que tu sois comprise, immédiatement.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" />
@@ -17,7 +17,7 @@ const PHASES = [
     number: "02",
     name: "Shift",
     description:
-      "Tu construis. Tu installes la structure, la visibilité et l'offre qui tourne sans que tout repose sur toi.",
+      "Transformer ton potentiel en stratégie. On installe ton système de pilotage commercial pour ne plus subir ton business, mais diriger ta croissance avec clarté.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
@@ -29,7 +29,7 @@ const PHASES = [
     number: "03",
     name: "Shine",
     description:
-      "Tu passes à l'échelle. Tu prends ta place de leader, tu impactes, tu inspires.",
+      "Ton business grandit. Ton rôle change. Tu prends ta place de leader, tu guides, tu inspires. On travaille ta posture, ton leadership et ton impact durable.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 16l-1 4 4-1 12-12-3-3L5 16zM12 2l1.5 3H17l-2.5 2 1 3L12 8l-3.5 2 1-3L7 5h3.5z" />
@@ -48,7 +48,7 @@ export default function Methode() {
             La M&eacute;thode SDL
           </span>
           <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-black italic">
-            Une progression en 3 phases, pens&eacute;e pour toi
+            La M&eacute;thode SDL&nbsp;: Une progression en 3&nbsp;phases, pens&eacute;e pour toi.
           </h2>
         </RevealOnScroll>
 

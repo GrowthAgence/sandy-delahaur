@@ -39,7 +39,7 @@ export default function Hero() {
             custom={0}
             className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block"
           >
-            L&apos;Excellence au F&eacute;minin
+            Mentor business &amp; cr&eacute;atrice d&apos;exp&eacute;riences entrepreneuriales
           </motion.span>
 
           <motion.h1
@@ -63,9 +63,10 @@ export default function Hero() {
             custom={2}
             className="font-body text-on-surface-variant max-w-xl text-lg mb-10 leading-relaxed font-light drop-shadow-lg"
           >
-            SDL Agency accompagne les femmes entrepreneures qui ont le talent,
-            l&apos;&eacute;nergie et l&apos;ambition — mais pas encore la
-            m&eacute;thode pour en vivre vraiment.
+            J&apos;accompagne les entrepreneures qui ont mille id&eacute;es &agrave; la
+            minute &agrave; structurer leur business et &agrave; canaliser leur
+            &eacute;nergie pour transformer leur talent en impact concret et
+            rentable.
           </motion.p>
 
           <motion.div
@@ -78,7 +79,7 @@ export default function Hero() {
               href="#acces"
               className="btn-shimmer text-on-primary px-10 py-5 font-body text-[10px] uppercase tracking-[0.2em] font-bold hover:scale-105 transition-transform duration-700 inline-flex items-center gap-2"
             >
-              Trouver ma porte d&apos;entr&eacute;e
+              J&apos;acc&egrave;de &agrave; ma porte d&apos;activation
               <svg
                 width="16"
                 height="16"

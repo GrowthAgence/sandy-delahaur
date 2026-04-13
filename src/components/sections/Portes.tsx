@@ -11,7 +11,7 @@ const TILES = [
   },
   {
     label: "SHIFT",
-    title: "Je construis ma visibilité et ma structure",
+    title: "Je pilote ma stratégie et ma croissance",
     href: "/shift",
     cta: "Découvrir",
     wide: false,
@@ -25,14 +25,14 @@ const TILES = [
   },
   {
     label: "ÉVÉNEMENTS",
-    title: "Je rejoins la communauté Modern Social Club",
+    title: "Je rejoins le Modern Social Club",
     href: "/evenements",
     cta: "Explorer le club",
     wide: true,
   },
   {
     label: "ENTREPRISES",
-    title: "Je cherche un accompagnement B2B",
+    title: "Je recherche un accompagnement BtoB",
     href: "/entreprises",
     cta: "Contact Pro",
     wide: false,
@@ -75,6 +75,14 @@ export default function Portes() {
             </RevealOnScroll>
           ))}
         </div>
+
+        <RevealOnScroll className="mt-16 md:mt-20 text-center">
+          <p className="font-body text-on-surface-variant text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light italic">
+            Ne r&eacute;fl&eacute;chis pas trop. Peu importe la porte que tu
+            pousses, c&apos;est celle qui t&apos;appelle aujourd&apos;hui.
+            &Eacute;coute ton instinct, il sait par o&ugrave; commencer.
+          </p>
+        </RevealOnScroll>
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export default function CtaGlobal() {
         </h2>
         <p className="font-body text-on-surface-variant max-w-2xl mx-auto text-lg md:text-xl mb-12 md:mb-16 font-light">
           <WordReveal delay={0.9} stagger={0.05}>
-            {"Un premier pas suffit. Réserve un appel de 30\u00a0minutes — on identifie ensemble ta prochaine étape."}
+            {"Un premier pas suffit. Réserve un appel d'activation de 30\u00a0minutes, on identifie ensemble la direction la plus pertinente pour ton projet."}
           </WordReveal>
         </p>
         <RevealOnScroll delay={1.6}>
@@ -27,7 +27,7 @@ export default function CtaGlobal() {
             className="btn-shimmer text-on-primary px-12 md:px-16 py-5 md:py-6 font-body text-xs uppercase tracking-[0.3em] font-bold hover:scale-105 transition-transform duration-700 shadow-2xl inline-flex items-center gap-4"
           >
             <WordReveal delay={1.8} stagger={0.1}>
-              {"Réserver mon appel"}
+              {"Réserver mon appel d'activation"}
             </WordReveal>
             <svg
               width="20"

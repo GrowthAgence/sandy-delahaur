@@ -17,17 +17,10 @@ export default function Probleme() {
 
         <RevealOnScroll delay={0.2}>
           <p className="font-body text-on-surface-variant text-xl leading-relaxed font-light">
-            Tu postes, tu cr&eacute;es, tu networktes. Tu donnes tout. Mais les
+            Tu postes, tu cr&eacute;es, tu networkes. Tu donnes tout. Mais les
             revenus ne suivent pas, les clients n&apos;arrivent pas
-            r&eacute;guli&egrave;rement, et tu commences &agrave; douter — de
-            toi, pas de ta m&eacute;thode.
-            <br />
-            <br />
-            <span className="text-on-surface font-medium">
-              Le probl&egrave;me, c&apos;est rarement le talent. C&apos;est
-              l&apos;absence d&apos;un syst&egrave;me qui transforme ton
-              &eacute;nergie en r&eacute;sultats.
-            </span>
+            r&eacute;guli&egrave;rement, et tu commences &agrave; douter.
+            Non pas de ta valeur — mais de la direction &agrave; prendre.
           </p>
         </RevealOnScroll>
       </div>

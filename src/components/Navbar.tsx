@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "Shine", href: "/shine" },
   { label: "Événements", href: "/evenements" },
   { label: "Entreprises", href: "/entreprises" },
-  { label: "Sandy", href: "/a-propos" },
+  { label: "Mon approche", href: "/a-propos" },
 ];
 
 export default function Navbar() {
@@ -44,7 +44,7 @@ export default function Navbar() {
           href="/#contact"
           className="hidden md:block btn-shimmer text-on-primary px-8 py-2 text-[10px] uppercase tracking-[0.2em] font-bold font-body"
         >
-          Réserver
+          Appel d&apos;activation
         </Link>
 
         {/* Mobile burger */}
@@ -88,7 +88,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="btn-shimmer text-on-primary px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold font-body text-center"
           >
-            Réserver
+            Appel d&apos;activation
           </Link>
         </div>
       )}
