@@ -1,40 +1,54 @@
+import Link from "next/link";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 const PHASES = [
   {
     number: "01",
     name: "Wake",
-    description:
-      "Avant d'être visible, il faut être claire. On clarifie ton message, ton offre et ta posture pour que tu sois comprise, immédiatement.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" />
-      </svg>
-    ),
+    tagline: "Clarifier pour mieux piloter.",
+    question:
+      "Vous travaillez beaucoup\u2026 mais vous ne savez plus quoi prioriser\u00a0?",
+    context:
+      "Vous avancez sur tout un peu. Mais rien n\u2019avance vraiment. L\u2019offre bouge. Les id\u00e9es changent. Les d\u00e9cisions attendent.",
+    items: [
+      "Le bon focus maintenant",
+      "L\u2019offre claire \u00e0 vendre",
+      "Les d\u00e9cisions qui relancent la croissance",
+    ],
+    href: "/wake",
     elevated: false,
   },
   {
     number: "02",
     name: "Shift",
-    description:
-      "Transformer ton potentiel en stratégie. On installe ton système de pilotage commercial pour ne plus subir ton business, mais diriger ta croissance avec clarté.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
-      </svg>
-    ),
+    tagline:
+      "Pr\u00e9parer une croissance plus rentable et mieux structur\u00e9e.",
+    question:
+      "Votre activit\u00e9 avance\u2026 mais tout repose encore sur vous\u00a0?",
+    context:
+      "Quand le business avance mais reste manuel, il est temps d\u2019automatiser la suite.",
+    items: [
+      "D\u00e9veloppement commercial structur\u00e9",
+      "Une croissance moderne gr\u00e2ce \u00e0 l\u2019IA et au marketing digital",
+      "Une organisation qui ne repose plus uniquement sur vous",
+    ],
+    href: "/shift",
     elevated: true,
   },
   {
     number: "03",
     name: "Shine",
-    description:
-      "Ton business grandit. Ton rôle change. Tu prends ta place de leader, tu guides, tu inspires. On travaille ta posture, ton leadership et ton impact durable.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M5 16l-1 4 4-1 12-12-3-3L5 16zM12 2l1.5 3H17l-2.5 2 1 3L12 8l-3.5 2 1-3L7 5h3.5z" />
-      </svg>
-    ),
+    tagline: "Incarner le niveau suivant.",
+    question:
+      "Votre business a \u00e9volu\u00e9, mais votre posture suit-elle vraiment\u00a0?",
+    context:
+      "Quand le business \u00e9volue, que l\u2019exposition augmente et que les enjeux changent\u2026 Rester au m\u00eame niveau de posture devient un frein. Il faut parler et d\u00e9cider autrement, puis prendre sa place dans les bons environnements.",
+    items: [
+      "Leadership & posture dirigeante",
+      "Communication d\u2019influence",
+      "R\u00e9seau strat\u00e9gique & positionnement march\u00e9",
+    ],
+    href: "/shine",
     elevated: false,
   },
 ];
@@ -43,39 +57,73 @@ export default function Methode() {
   return (
     <section id="methode" className="py-32 md:py-48 bg-surface-container-low">
       <div className="container mx-auto px-6 md:px-12">
-        <RevealOnScroll className="mb-24 md:mb-32 text-center">
+        <RevealOnScroll className="mb-16 md:mb-20 text-center max-w-4xl mx-auto">
           <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
             La M&eacute;thode SDL
           </span>
-          <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-black italic">
-            La M&eacute;thode SDL&nbsp;: Une progression en 3&nbsp;phases, pens&eacute;e pour toi.
+          <h2 className="font-headline font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tighter mb-6">
+            Trois &eacute;tapes. Un m&ecirc;me objectif&nbsp;:{" "}
+            <span className="text-gold-gradient italic">
+              prendre les bonnes d&eacute;cisions au bon moment.
+            </span>
           </h2>
+          <p className="font-body text-on-surface-variant text-lg font-light">
+            Votre chemin commence ici.
+          </p>
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PHASES.map((phase, i) => (
             <RevealOnScroll key={phase.name} delay={i * 0.2}>
               <div
-                className={`p-12 md:p-16 gold-border-subtle card-depth group card-hover-state flex flex-col justify-between min-h-[450px] md:min-h-[500px] ${
+                className={`p-10 md:p-14 gold-border-subtle card-depth group card-hover-state flex flex-col justify-between min-h-[580px] md:min-h-[620px] ${
                   phase.elevated
-                    ? "bg-surface-container md:-translate-y-12"
+                    ? "bg-surface-container md:-translate-y-8"
                     : "bg-surface"
                 }`}
               >
                 <div>
-                  <span className="font-headline text-7xl text-outline-variant/10 mb-8 block group-hover:text-primary/40 transition-colors duration-700">
-                    {phase.number}
+                  <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-2 block">
+                    Phase {phase.number}
                   </span>
-                  <h3 className="font-headline text-3xl md:text-4xl mb-6 tracking-widest uppercase">
+                  <h3 className="font-headline text-3xl md:text-4xl mb-3 tracking-widest uppercase">
                     {phase.name}
                   </h3>
-                  <p className="font-body text-on-surface-variant leading-relaxed text-lg">
-                    {phase.description}
+                  <p className="font-body text-primary text-sm font-medium mb-6">
+                    {phase.tagline}
                   </p>
+
+                  <p className="font-headline text-lg italic text-on-surface mb-4 leading-snug">
+                    {phase.question}
+                  </p>
+                  <p className="font-body text-on-surface-variant text-base leading-relaxed mb-6">
+                    {phase.context}
+                  </p>
+
+                  <p className="font-body text-[10px] uppercase tracking-[0.2em] text-outline mb-4 font-bold">
+                    Concr&egrave;tement, on {i === 0 ? "clarifie" : i === 1 ? "met en place" : "construit"}&nbsp;:
+                  </p>
+                  <ul className="space-y-2 mb-8">
+                    {phase.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 font-body text-on-surface-variant text-base"
+                      >
+                        <span className="text-primary mt-1 shrink-0">
+                          &#10003;
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="pt-8 text-primary opacity-20 group-hover:opacity-100 transition-opacity duration-700">
-                  {phase.icon}
-                </div>
+
+                <Link
+                  href={phase.href}
+                  className="text-[10px] uppercase tracking-widest font-bold border-b border-primary/30 pb-1 hover:border-primary transition-colors font-body text-primary inline-block"
+                >
+                  D&eacute;couvrir {phase.name}
+                </Link>
               </div>
             </RevealOnScroll>
           ))}

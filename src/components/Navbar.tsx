@@ -8,8 +8,8 @@ const NAV_LINKS = [
   { label: "Shift", href: "/shift" },
   { label: "Shine", href: "/shine" },
   { label: "Événements", href: "/evenements" },
-  { label: "Entreprises", href: "/entreprises" },
   { label: "Mon approche", href: "/a-propos" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -18,7 +18,6 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
       <div className="flex justify-between items-center px-6 md:px-12 py-5 w-full max-w-[1920px] mx-auto">
-        {/* Logo */}
         <Link
           href="/"
           className="font-headline text-2xl font-bold tracking-tighter text-primary-container breath-accent"
@@ -26,7 +25,6 @@ export default function Navbar() {
           SDL Agency
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex gap-12 items-center">
           {NAV_LINKS.map((link) => (
             <Link
@@ -39,15 +37,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
         <Link
           href="/#contact"
           className="hidden md:block btn-shimmer text-on-primary px-8 py-2 text-[10px] uppercase tracking-[0.2em] font-bold font-body"
         >
-          Appel d&apos;activation
+          R&eacute;server mon audit strat&eacute;gique
         </Link>
 
-        {/* Mobile burger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-on-surface"
@@ -70,7 +66,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-surface-container-low px-6 pb-8 pt-4 flex flex-col gap-6">
           {NAV_LINKS.map((link) => (
@@ -88,12 +83,11 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="btn-shimmer text-on-primary px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold font-body text-center"
           >
-            Appel d&apos;activation
+            R&eacute;server mon audit strat&eacute;gique
           </Link>
         </div>
       )}
 
-      {/* Bottom separator */}
       <div className="bg-surface-container-low h-px w-full absolute bottom-0" />
     </nav>
   );

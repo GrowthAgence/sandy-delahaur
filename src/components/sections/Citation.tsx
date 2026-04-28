@@ -7,7 +7,7 @@ export default function Citation() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
         <h2 className="font-headline text-3xl md:text-5xl lg:text-6xl italic font-light leading-tight max-w-5xl mx-auto">
           <WordReveal>
-            {"«\u00a0On ne vend pas sur les réseaux ce qu'on ne sait pas vendre dans la vraie vie.\u00a0»"}
+            {"Ce n\u2019est pas toujours une question d\u2019effort. C\u2019est souvent une question de syst\u00e8me."}
           </WordReveal>
         </h2>
         <RevealOnScroll delay={1.2}>

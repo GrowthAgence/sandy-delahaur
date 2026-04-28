@@ -29,26 +29,25 @@ const TESTIMONIALS = [
 
 export default function Temoignages() {
   return (
-    <section id="temoignages" className="py-24 md:py-32 bg-surface overflow-hidden">
+    <section id="temoignages" className="py-24 md:py-32 bg-surface-container-low overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <RevealOnScroll className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 bg-surface-container-low gold-border-subtle">
-            <span className="text-primary text-2xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span className="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">
-              Plus de 100 avis Google
-            </span>
-          </div>
-          <h2 className="font-headline text-4xl md:text-5xl">
-            Elles l&apos;ont fait. Elles en parlent.
+          <span className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-6 block">
+            Ils &amp; elles l&apos;ont v&eacute;cu
+          </span>
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter leading-[1.1]">
+            Ce que &ccedil;a change.
           </h2>
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {TESTIMONIALS.map((t, i) => (
             <RevealOnScroll key={t.name} delay={i * 0.15}>
-              <div className="p-10 md:p-12 bg-surface-container-low gold-border-subtle h-full flex flex-col justify-between">
+              <div className="p-10 md:p-12 bg-surface gold-border-subtle h-full flex flex-col justify-between">
                 <div>
-                  <div className="text-primary text-sm mb-6">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <div className="text-primary text-sm mb-6">
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                  </div>
                   <p className="font-headline text-lg md:text-xl italic leading-relaxed mb-10">
                     &ldquo;{t.quote}&rdquo;
                   </p>
