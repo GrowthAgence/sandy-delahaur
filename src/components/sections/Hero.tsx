@@ -19,15 +19,15 @@ const fadeUp = {
 export default function Hero() {
   return (
     <header className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute right-0 bottom-0 top-0 w-[55%] z-0 hidden md:block">
         <Image
           src="/images/sandy-hero.png"
           alt="Sandy Delahaur — SDL Agency"
           fill
           priority
-          className="object-cover object-right"
+          className="object-cover object-right-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/20 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
