@@ -68,28 +68,24 @@ Animation respiration 3s pour le logo (opacity + scale).
 ## Composants
 
 ### Navbar
-- Fixed top, backdrop-blur, liens : Wake, Shift, Shine, Événements, Entreprises, Sandy
-- CTA "Réserver" doré shimmer
+- Fixed top, backdrop-blur, liens : Wake, Shift, Shine, Événements, Mon approche, Contact
+- CTA "Réserver mon audit stratégique" doré shimmer
 - Menu mobile hamburger
 
-### Hero Section (pattern standardisé)
-```
-section.min-h-dvh.flex.items-center.pt-24.overflow-hidden.bg-surface
-  div.container.mx-auto.px-6.md:px-12.relative.z-10
-    div.max-w-4xl
-      RevealOnScroll → span.label
-      RevealOnScroll → h1.font-headline.font-black (accent dans span.text-gold-gradient.italic)
-      RevealOnScroll → p.subtitle
-```
+### Hero Section
+Photo Sandy positionnée à droite (55% width, `object-cover object-right-top`), overlay gradient minimal (`from-surface to-transparent`). Texte à gauche sur `max-w-4xl`. Dual CTA : outline (Explorer) + shimmer (Réserver).
+
+### Partenaires (bandeau défilant)
+Motion animate `x: ["0%", "-50%"]` en boucle 25s, noms dupliqués pour seamless loop, fondu gradient latéral.
 
 ### RevealOnScroll
 Composant d'animation scroll-triggered (motion/react `whileInView`). Accepte `delay` et `className`.
 
 ### WordReveal
-Animation mot par mot scroll-triggered. Chaque mot apparaît avec slide-up + blur qui se dissipe, en cascade (stagger). Props : `children` (string), `delay`, `stagger` (défaut 0.08s), `wordClassName`. Utilisé sur tous les titres et boutons des sections CTA de fin de page.
+Animation mot par mot scroll-triggered. Chaque mot apparaît avec slide-up + blur qui se dissipe, en cascade (stagger). Props : `children` (string), `delay`, `stagger` (défaut 0.08s), `wordClassName`. Utilisé sur Punchline et CTA final.
 
 ### Footer
-Composant global partagé entre toutes les pages.
+3 colonnes programmes (Wake/Shift/Shine), Sandy CEO, liens légaux.
 
 ## Layout
 
@@ -103,32 +99,39 @@ Composant global partagé entre toutes les pages.
 
 ### Grilles
 - Cards : `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`
+- Résultats : `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`
 - Bento : `grid grid-cols-1 md:grid-cols-12` avec spans variables
 - 4 colonnes : `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`
 
 ## Patterns de contenu
 
-### Citation visuelle
-Bloc isolé avec fond `surface-container-high`, bordure `gold-border-subtle`, padding large, texte `font-headline font-black italic` centré.
-
-### Chiffres clés
-Grille 2x2 ou 4 colonnes, chiffre en `font-headline font-black text-3xl md:text-4xl text-primary`, label en `font-body text-sm uppercase tracking-widest`.
+### Citation visuelle / Punchline
+Bloc isolé centré, `font-headline italic font-light`, WordReveal, séparateur gold 24px.
 
 ### Blocs distincts (forces, piliers)
 Cards avec icône SVG + titre + description, fond `surface` ou `surface-container-high`, bordure `gold-border-subtle`.
 
+### Méthode SDL (3 colonnes)
+Cards détaillées : phase label, nom uppercase tracking-widest, tagline gold, question italique, contexte, liste items ✓, lien Découvrir. Card centrale élevée (`md:-translate-y-8`).
+
+### Résultats (grille compacte)
+Cards `p-6` avec checkmark gold + texte court, `gold-border-subtle`, `card-hover-state`.
+
+### CTA dual
+Bouton outline (border primary/30, hover bg-primary/10) + bouton shimmer doré. Flex row avec gap-4.
+
 ### CTA de fin de page
-Sections CTA avec WordReveal sur titre + sous-titre + bouton(s). Le titre se révèle mot par mot au scroll, le sous-titre suit, puis le bouton slide-up (RevealOnScroll) avec texte WordReveal. Présent sur 14 pages (homepage, wake/*, shift/*, shine/*, a-propos).
+Sections CTA avec WordReveal sur titre + sous-titre + bouton(s). Le titre se révèle mot par mot au scroll, le sous-titre suit, puis le bouton slide-up.
 
 ### Alternance fond
-Alterner `bg-surface` → `bg-surface-container-low` → `bg-surface-container-lowest` pour la rupture visuelle entre sections.
+Alterner `bg-surface` → `bg-surface-container-low` → `bg-surface` pour la rupture visuelle entre sections.
 
 ## Médias
 
 ### Images
 - Répertoire : `/public/images/`
 - Format : PNG/WebP optimisé
-- Hero : `object-cover` en position absolute avec overlay gradient
+- Hero : positionnée absolute right, `object-cover object-right-top` avec overlay gradient
 
 ### Vidéos
 - Répertoire : `/public/videos/`
